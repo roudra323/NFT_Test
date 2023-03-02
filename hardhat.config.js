@@ -3,7 +3,7 @@
 require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 
-const API_KEY = process.env.API_KEY;
+const API_URL = process.env.API_URL;
 const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY;
 module.exports = {
   solidity: "0.8.17",
@@ -12,7 +12,7 @@ module.exports = {
   networks: {
     hardhat: {},
     goerli: {
-      url: `https://goerli.infura.io/v3/${API_KEY}`,
+      url: API_URL,
       accounts: [GOERLI_PRIVATE_KEY],
     },
   },
